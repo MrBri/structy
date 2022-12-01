@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-func main() {
-	fmt.Println("vim-go")
-}
-
-func Greet(name string) string {
-	return "hey " + name
+func Greet(s string) string {
+	return fmt.Sprintf("hey %s", s)
 }
