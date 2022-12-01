@@ -6,7 +6,13 @@ func TestCompress(t *testing.T) {
 	tests := []struct {
 		in  string
 		out string
-	}{{"ccaaatsss", "2c3at3s"}, {"ssssbbz", "4s2bz"}}
+	}{
+		{"ccaaatsss", "2c3at3s"},
+		{"ssssbbz", "4s2bz"},
+		{"ppoppppp", "2po5p"},
+		{"nnneeeeeeeeeeeezz", "3n12e2z"},
+		{"yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy", "127y"},
+	}
 
 	for _, tt := range tests {
 		t.Run(tt.in, func(t *testing.T) {
