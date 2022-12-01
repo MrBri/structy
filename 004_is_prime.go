@@ -3,11 +3,10 @@ package main
 import "math"
 
 func IsPrime(n int) bool {
-	if n < 2 {
+	if n == 1 {
 		return false
 	}
-	sq := math.Sqrt(float64(n))
-	for i := 2; i <= int(sq); i++ {
+	for i := 2; i <= int(math.Sqrt(float64(n))); i++ {
 		if n%i == 0 {
 			return false
 		}
